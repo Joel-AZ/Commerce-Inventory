@@ -1,0 +1,14 @@
+{
+    "root": true,
+    "extends": [
+        "@nuxtjs/eslint-config-typescript"
+    ],
+    "rules": {
+        "no-tabs": [
+            "error",
+            {
+                "allowIndentationTabs": true
+            }
+        ]
+    }
+}
