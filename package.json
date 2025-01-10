@@ -1,5 +1,5 @@
 {
-  "name": "san-carlos-panel",
+  "name": "inventory-admin",
   "private": true,
   "scripts": {
     "build": "nuxt build",

@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'san-carlos-panel',
+      name: 'commerce-inventory-panel',
       script: 'yarn start'
     }
   ]

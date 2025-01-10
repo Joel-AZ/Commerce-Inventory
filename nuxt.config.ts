@@ -11,7 +11,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'San Carlos - Panel',
+      title: 'Inventory - Panel',
       meta: [
         {
           name: 'viewport',
