@@ -7,9 +7,24 @@ const rail = ref(true)
 const items = [
 	{ text: 'Links Management', icon: 'mdi-link', link: '/home' },
 	{
-		text: 'Subscriptions Management',
-		icon: 'mdi-credit-card-outline',
-		link: '/suscriptionsManagement',
+		text: 'Listar Clientes',
+		icon: 'mdi-text-account',
+		link: '/client-list',
+	},
+	{
+		text: 'Nuevo Cliente',
+		icon: 'mdi-account-plus-outline',
+		link: '/new-client',
+	},
+	{
+		text: 'Productos',
+		icon: 'mdi-clipboard-list-outline',
+		link: '/product-list',
+	},
+	{
+		text: 'Nuevo Productos',
+		icon: 'mdi-tag-plus',
+		link: '/new-procuct',
 	},
 
 	{ text: 'Settings', icon: 'mdi-cog', notifications: 8, link: '/subastas' },
@@ -29,7 +44,7 @@ const items = [
 		<div class="sc-flex sc-flex-col sc-justify-between sc-h-full">
 			<div>
 				<v-img
-					src="https://d23.com/app/uploads/2022/12/Avatar_Logo-300x93.png"
+					src="https://i.pinimg.com/originals/a1/5f/51/a15f5117759cd710fae6ab2461250f4a.png"
 					width="150"
 					height="100"
 					contain
