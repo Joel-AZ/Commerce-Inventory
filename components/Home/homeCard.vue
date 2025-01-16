@@ -11,7 +11,7 @@ const props = defineProps<cardProps>()
 </script>
 
 <template>
-	<v-card v-ripple class="!sc-rounded-2xl">
+	<v-card v-ripple class="!sc-rounded-2xl sc-h-fit">
 		<v-card-actions class="sc-mx-2 sc-mt-2">
 			<v-icon color="primary" size="40">{{ props.icon }}</v-icon>
 		</v-card-actions>
