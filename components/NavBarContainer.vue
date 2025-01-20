@@ -9,22 +9,22 @@ const items = [
 	{
 		text: 'Listar Clientes',
 		icon: 'mdi-text-account',
-		link: '/client-list',
+		link: 'client/client-list',
 	},
 	{
 		text: 'Nuevo Cliente',
 		icon: 'mdi-account-plus-outline',
-		link: '/new-client',
+		link: 'client/new-client',
 	},
 	{
 		text: 'Productos',
 		icon: 'mdi-clipboard-list-outline',
-		link: '/product-list',
+		link: 'product/product-list',
 	},
 	{
 		text: 'Nuevo Productos',
 		icon: 'mdi-tag-plus',
-		link: '/new-procuct',
+		link: 'product/new-procuct',
 	},
 
 	{ text: 'Settings', icon: 'mdi-cog', notifications: 8, link: '/subastas' },
