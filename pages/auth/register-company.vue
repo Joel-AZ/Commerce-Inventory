@@ -7,11 +7,10 @@ const form = ref({
 	ruc: 0,
 	email: '',
 	phoneNumber: '',
-    city:'',
-    neighborhood:'',
-    mainStreet:'',
-    secondaryStreet::'',
-
+	city: '',
+	neighborhood: '',
+	mainStreet: '',
+	secondaryStreet: '',
 })
 
 const handleSubmit = () => {
