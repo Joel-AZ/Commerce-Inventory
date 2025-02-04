@@ -7,27 +7,27 @@ export default defineNuxtRouteMiddleware(async (to) => {
 
   const redirectLogout = to.query.logout
 
-  if (redirectLogout) {
-    return navigateTo({ name: 'auth-logout' })
-  }
+  // if (redirectLogout) {
+  //   return navigateTo({ name: 'auth-logout' })
+  // }
 
-  if (!auth.token) {
-    auth.retrieveToken()
-  }
+  // if (!auth.token) {
+  //   auth.retrieveToken()
+  // }
 
-  const token = computed(() => auth.token)
-  if (!user.currentUser && token.value) {
-    await user.me()
-  }
+  // const token = computed(() => auth.token)
+  // if (!user.currentUser && token.value) {
+  //   await user.me()
+  // }
 
-  const routeName = to.name
-  const isUnauthenticatedRoute = !!unauthenticatedRoutes[routeName]
+  // const routeName = to.name
+  // const isUnauthenticatedRoute = !!unauthenticatedRoutes[routeName]
 
-  if (isUnauthenticatedRoute && auth.token) {
-    return navigateTo({ name: 'index' })
-  }
+  // if (isUnauthenticatedRoute && auth.token) {
+  //   return navigateTo({ name: 'index' })
+  // }
 
-  if (!auth.token && to.name.search('auth') === -1) {
-    auth.logout()
-  }
+  // if (!auth.token && to.name.search('auth') === -1) {
+  //   auth.logout()
+  // }
 })
