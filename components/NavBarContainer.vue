@@ -5,7 +5,7 @@ const drawer = ref(true)
 const rail = ref(true)
 
 const items = [
-  { text: 'Links Management', icon: 'mdi-link', link: '/home' },
+  { text: 'Inicio', icon: 'mdi-link', link: '/' },
   {
     text: 'Listar Clientes',
     icon: 'mdi-text-account',
@@ -24,10 +24,16 @@ const items = [
   {
     text: 'Nuevo Productos',
     icon: 'mdi-tag-plus',
-    link: '/product/new-procuct'
-  },
+    link: '/product/new-product'
+  }
 
-  { text: 'Settings', icon: 'mdi-cog', notifications: 8, link: '/subastas' }
+]
+
+const itemsSettings = [
+  { text: 'Settings', icon: 'mdi-cog', notifications: 8, link: '/subastas' },
+
+  { text: 'Cerrar Sesion', icon: 'mdi-logout', link: '/logout' }
+
 ]
 </script>
 
@@ -70,9 +76,27 @@ const items = [
             </v-list-item-title>
           </v-list-item>
         </v-list>
-      </div>
 
-      <v-spacer />
+        <v-spacer />
+      </div>
+      <v-list density="compact">
+        <v-list-item
+          v-for="(itemsSettings, i) in itemsSettings"
+          :key="i"
+          :value="itemsSettings"
+          color="primary"
+          active-class="sc-bg-primary sc-rounded"
+          :to="itemsSettings.link"
+        >
+          <template #prepend>
+            <v-icon :icon="itemsSettings.icon" />
+          </template>
+
+          <v-list-item-title>
+            {{ itemsSettings.text }}
+          </v-list-item-title>
+        </v-list-item>
+      </v-list>
     </div>
 
     <template #append>

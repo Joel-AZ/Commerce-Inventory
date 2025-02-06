@@ -22,7 +22,7 @@ const handleCancel = (plan: Plan) => {
   <div>
     <div class="sc-py-6">
       <div class="sc-flex">
-        <manage-client-form />
+        <product-form />
       </div>
     </div>
   </div>

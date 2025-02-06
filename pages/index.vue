@@ -60,13 +60,13 @@ const addNewItem = () => {
           icon="mdi-plus-circle-outline"
           title="Productos"
           description="Puedes agregar Productos aqui"
-          @click="router.push('/profile')"
+          @click="router.push('/new-product')"
         />
         <HomeCard
           icon="mdi-plus-circle-outline"
           title="Clientes"
           description="Agregar nuevo cliente"
-          @click="router.push('/profile')"
+          @click="router.push('/new-client')"
         />
       </div>
       <div class="sc-flex sc-flex-col sc-w-4/12">

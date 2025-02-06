@@ -2,6 +2,8 @@
 import { ref } from 'vue'
 
 const showDialog = ref(true)
+const router = useRouter()
+
 const type = ref<String>('password')
 const fields = ref({
   email: '',
@@ -54,7 +56,7 @@ const fields = ref({
               ¿Aún no te has registrado?
               <br>
             </p>
-            <div class="sc-text-primary sc-font-bold sc-cursor-pointer" @click="">
+            <div class="sc-text-primary sc-font-bold sc-cursor-pointer" @click="router.push('auth/register-ownwer')">
               Crea tu cuenta aquí
             </div>
           </div>
