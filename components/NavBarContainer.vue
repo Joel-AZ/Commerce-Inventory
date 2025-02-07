@@ -7,6 +7,12 @@ const rail = ref(true)
 const items = [
   { text: 'Inicio', icon: 'mdi-home', link: '/' },
   {
+    text: 'Listar usuarios',
+    icon: 'mdi-text-account',
+    link: '/account/account-list'
+  },
+
+  {
     text: 'Listar Clientes',
     icon: 'mdi-text-account',
     link: '/client/client-list'
@@ -32,7 +38,7 @@ const items = [
 const itemsSettings = [
   { text: 'Categorias', icon: 'mdi-clipboard-list-outline', link: '/categories/categories-list' },
 
-  { text: 'Settings', icon: 'mdi-cog', notifications: 8, link: '/subastas' },
+  { text: 'Settings', icon: 'mdi-cog', notifications: 8, link: '/settings/settings' },
 
   { text: 'Cerrar Sesion', icon: 'mdi-logout', link: '/logout' }
 
