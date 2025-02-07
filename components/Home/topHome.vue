@@ -2,23 +2,27 @@
 import { defineEmits, defineProps } from 'vue'
 
 defineProps({
-  title: { type: String },
+  title: { type: String, default: '' },
   items: {
     type: Array,
     default: () => []
   },
   onEditItem: {
-    type: Function
+    type: Function,
+    default: () => {}
   },
   onDeleteItem: {
-    type: Function
+    type: Function,
+    default: () => {}
+
   },
   onAddNewItem: {
-    type: Function
+    type: Function,
+    default: () => {}
+
   }
 })
 
-// Emitir eventos si es necesario
 defineEmits(['edit', 'delete', 'add'])
 </script>
 

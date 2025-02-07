@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const router = useRouter()
+
 const items = [
   {
     title: 'Link 1 - https://example.com',
@@ -16,7 +18,7 @@ const items = [
 ]
 
 const editItem = (item: any) => {
-  console.log('Edit:', item)
+  console.log('Edit:', item.title)
 }
 
 const deleteItem = (item: any) => {
@@ -28,11 +30,11 @@ const deleteItem = (item: any) => {
   <div>
     <div class="sc-flex sc-justify-between sc-py-6">
       <P class="sc-font-bold sc-text-lg">
-        Links Management
+        Lista de Categorias
       </P>
 
-      <v-btn size="small" rounded="lg" color="primary" @click="deleteItem(item)">
-        Add New Link
+      <v-btn size="small" rounded="lg" color="primary" @click="() => router.push('/categories/new-category')">
+        Agregar nueva Categoria
       </v-btn>
     </div>
     <div class="sc-flex sc-flex-col sc-justify-center sc-py-6">

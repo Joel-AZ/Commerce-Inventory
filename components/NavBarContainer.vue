@@ -5,7 +5,7 @@ const drawer = ref(true)
 const rail = ref(true)
 
 const items = [
-  { text: 'Inicio', icon: 'mdi-link', link: '/' },
+  { text: 'Inicio', icon: 'mdi-home', link: '/' },
   {
     text: 'Listar Clientes',
     icon: 'mdi-text-account',
@@ -30,6 +30,8 @@ const items = [
 ]
 
 const itemsSettings = [
+  { text: 'Categorias', icon: 'mdi-clipboard-list-outline', link: '/categories/categories-list' },
+
   { text: 'Settings', icon: 'mdi-cog', notifications: 8, link: '/subastas' },
 
   { text: 'Cerrar Sesion', icon: 'mdi-logout', link: '/logout' }
