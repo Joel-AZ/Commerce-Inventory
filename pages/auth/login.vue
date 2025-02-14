@@ -1,14 +1,34 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { useToast } from 'vue-toastification'
 
-const showDialog = ref(true)
-const router = useRouter()
+const toast = useToast()
+const authStore = useAuthStore()
 
-const type = ref<String>('password')
+definePageMeta({
+  layout: 'auth'
+})
+
+const type = ref<string>('password')
 const fields = ref({
   email: '',
   password: ''
 })
+
+const changePasswordType = () => {
+  if (type.value === 'password') { type.value = 'text' } else { type.value = 'password' }
+}
+
+const login = async () => {
+  try {
+    await authStore.login(fields.value.email, fields.value.password)
+  } catch (error: any) {
+    toast.error(error.toString())
+  }
+}
+
+const registerOwner = () => {
+  return navigateTo({ name: 'auth-register-owner' })
+}
 </script>
 
 <template>
@@ -17,7 +37,7 @@ const fields = ref({
       <v-card class="!sc-rounded-3xl sc-mt-5 sc-p-5 sc-w-full">
         <div class="!sc-px-10 sc-mx-10 sc-my-2">
           <div class="sc-flex sc-items-end sc-justify-end" />
-          <v-form class="sc-p-5">
+          <v-form class="sc-p-5" @submit.prevent="login">
             <label class="sc-text-black">Correo electrónico</label>
             <v-text-field
               v-model="fields.email"
@@ -39,8 +59,9 @@ const fields = ref({
               class="sc-mt-2"
               placeholder="Contraseña"
               append-inner-icon="mdi-eye-outline"
+              @click:append-inner="changePasswordType"
             />
-            <v-btn type="button" block class="sc-my-5 !sc-rounded-lg !sc-py-6" color="primary">
+            <v-btn type="submit" block class="sc-my-5 !sc-rounded-lg !sc-py-6" color="primary">
               Iniciar Sesión
             </v-btn>
           </v-form>
@@ -56,7 +77,7 @@ const fields = ref({
               ¿Aún no te has registrado?
               <br>
             </p>
-            <div class="sc-text-primary sc-font-bold sc-cursor-pointer" @click="router.push('auth/register-ownwer')">
+            <div class="sc-text-primary sc-font-bold sc-cursor-pointer" @click="registerOwner">
               Crea tu cuenta aquí
             </div>
           </div>

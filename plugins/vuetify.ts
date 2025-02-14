@@ -12,7 +12,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   const myCustomLightTheme: ThemeDefinition = {
     dark: false,
     colors: {
-      primary: '#00000',
+      primary: '#000000',
       error: '#B00020',
       info: '#2196F3',
       success: '#4CAF50',

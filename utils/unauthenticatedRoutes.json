@@ -1,3 +1,4 @@
 {
-  "auth-login": 1
+  "auth-login": 1,
+	"auth-register-owner": 1
 }
