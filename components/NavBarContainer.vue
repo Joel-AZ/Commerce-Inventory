@@ -1,7 +1,6 @@
 <script setup>
 const route = useRouter()
 
-const drawer = ref(true)
 const rail = ref(true)
 
 const items = [
@@ -40,7 +39,7 @@ const itemsSettings = [
 
   { text: 'Settings', icon: 'mdi-cog', notifications: 8, link: '/settings/settings' },
 
-  { text: 'Cerrar Sesion', icon: 'mdi-logout', link: '/logout' }
+  { text: 'Cerrar Sesion', icon: 'mdi-logout', link: '/auth/logout' }
 
 ]
 </script>
@@ -89,19 +88,19 @@ const itemsSettings = [
       </div>
       <v-list density="compact">
         <v-list-item
-          v-for="(itemsSettings, i) in itemsSettings"
+          v-for="(item, i) in itemsSettings"
           :key="i"
-          :value="itemsSettings"
+          :value="item"
           color="primary"
           active-class="sc-bg-primary sc-rounded"
-          :to="itemsSettings.link"
+          :to="item.link"
         >
           <template #prepend>
-            <v-icon :icon="itemsSettings.icon" />
+            <v-icon :icon="item.icon" />
           </template>
 
           <v-list-item-title>
-            {{ itemsSettings.text }}
+            {{ item.text }}
           </v-list-item-title>
         </v-list-item>
       </v-list>
