@@ -39,8 +39,8 @@ export const useAuthStore = defineStore('auth', () => {
     if (error.value) {
       throw new Error(error.value.message)
     }
-
-    return data.value
+    // esto debe cambiarse por llevarte al dashboard si el usuario esta activo y a la vista especial si esta pendiente
+    return router.replace('/auth/login')
   }
 
   const login = async (email: string, password: string, noRedirect = false) => {
